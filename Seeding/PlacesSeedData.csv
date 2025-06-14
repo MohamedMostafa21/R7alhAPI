@@ -1,0 +1,6 @@
+Name,Description,Type,City,Country,Location,Latitude,Longitude,AveragePrice,Thumbnail,Image1,Image2,Image3
+Great Pyramid of Giza,"One of the Seven Wonders of the Ancient World, a massive limestone pyramid.",Landmark,Giza,Egypt,"Al Haram, Nazlet El-Semman",29.9792,31.1342,20,GreatPyramidGiza_thumb.jpg,GreatPyramidGiza_1.jpg,GreatPyramidGiza_2.jpg,
+Egyptian Museum,Home to an extensive collection of ancient Egyptian artifacts.,Museum,Cairo,Egypt,"Tahrir Square, Downtown",30.0478,31.2336,15,EgyptianMuseum_thumb.jpg,EgyptianMuseum_1.jpg,,
+Khan el-Khalili,A historic bazaar and souq in the Islamic Cairo district.,Market,Cairo,Egypt,"Al-Muizz Street, Islamic Cairo",30.0475,31.2621,0,KhanelKhalili_thumb.jpg,KhanelKhalili_1.jpg,KhanelKhalili_2.jpg,KhanelKhalili_3.jpg
+Luxor Temple,A large ancient Egyptian temple complex on the east bank of the Nile.,Landmark,Luxor,Egypt,"Corniche El Nil, Luxor",25.6996,32.6394,10,LuxorTemple_thumb.jpg,LuxorTemple_1.jpg,,
+Montaza Palace,A palace and gardens built by Khedive Abbas II in Alexandria.,Palace,Alexandria,Egypt,"Montaza, Alexandria",31.2885,30.0159,5,MontazaPalace_thumb.jpg,MontazaPalace_1.jpg,MontazaPalace_2.jpg,
