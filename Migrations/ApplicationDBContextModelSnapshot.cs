@@ -190,6 +190,32 @@ namespace R7alaAPI.Migrations
                     b.ToTable("AspNetRoles", (string)null);
                 });
 
+            modelBuilder.Entity("R7alaAPI.Models.Chat", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TourGuideId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TourGuideId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Chats");
+                });
+
             modelBuilder.Entity("R7alaAPI.Models.City", b =>
                 {
                     b.Property<int>("Id")
@@ -442,6 +468,40 @@ namespace R7alaAPI.Migrations
                     b.HasIndex("RestaurantId");
 
                     b.ToTable("Meals");
+                });
+
+            modelBuilder.Entity("R7alaAPI.Models.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ChatId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SentAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChatId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("R7alaAPI.Models.Place", b =>
@@ -1010,6 +1070,25 @@ namespace R7alaAPI.Migrations
                     b.Navigation("Place");
                 });
 
+            modelBuilder.Entity("R7alaAPI.Models.Chat", b =>
+                {
+                    b.HasOne("R7alaAPI.Models.TourGuide", "TourGuide")
+                        .WithMany()
+                        .HasForeignKey("TourGuideId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("R7alaAPI.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("TourGuide");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("R7alaAPI.Models.Favorite", b =>
                 {
                     b.HasOne("R7alaAPI.Models.Hotel", "Hotel")
@@ -1065,6 +1144,25 @@ namespace R7alaAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Restaurant");
+                });
+
+            modelBuilder.Entity("R7alaAPI.Models.Message", b =>
+                {
+                    b.HasOne("R7alaAPI.Models.Chat", "Chat")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("R7alaAPI.Models.User", "Sender")
+                        .WithMany()
+                        .HasForeignKey("SenderId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Chat");
+
+                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("R7alaAPI.Models.Plan", b =>
@@ -1178,6 +1276,11 @@ namespace R7alaAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("R7alaAPI.Models.Chat", b =>
+                {
+                    b.Navigation("Messages");
                 });
 
             modelBuilder.Entity("R7alaAPI.Models.Hotel", b =>

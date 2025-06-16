@@ -5,6 +5,7 @@ using R7alaAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 
 namespace R7alaAPI.Data
 {
@@ -30,6 +31,8 @@ namespace R7alaAPI.Data
         public DbSet<PlanPlace> PlanPlaces { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<Activity> Activities { get; set; }
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -72,6 +75,46 @@ namespace R7alaAPI.Data
                     .WithOne(u => u.TourGuide)
                     .HasForeignKey<TourGuide>(tg => tg.UserId)
                     .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Chat configuration
+            builder.Entity<Chat>(entity =>
+            {
+                entity.HasKey(c => c.Id);
+                entity.Property(c => c.UserId).IsRequired();
+                entity.Property(c => c.TourGuideId).IsRequired();
+                entity.Property(c => c.CreatedAt).IsRequired();
+
+                entity.HasOne(c => c.User)
+                    .WithMany()
+                    .HasForeignKey(c => c.UserId)
+                    .OnDelete(DeleteBehavior.NoAction); // NoAction to avoid cascade with TourGuide
+
+                entity.HasOne(c => c.TourGuide)
+                    .WithMany()
+                    .HasForeignKey(c => c.TourGuideId)
+                    .OnDelete(DeleteBehavior.NoAction);
+            });
+
+            // Message configuration
+            builder.Entity<Message>(entity =>
+            {
+                entity.HasKey(m => m.Id);
+                entity.Property(m => m.ChatId).IsRequired();
+                entity.Property(m => m.SenderId).IsRequired();
+                entity.Property(m => m.Content).IsRequired().HasMaxLength(1000);
+                entity.Property(m => m.SentAt).IsRequired();
+                entity.Property(m => m.IsRead).IsRequired();
+
+                entity.HasOne(m => m.Chat)
+                    .WithMany(c => c.Messages)
+                    .HasForeignKey(m => m.ChatId)
+                    .OnDelete(DeleteBehavior.NoAction);
+
+                entity.HasOne(m => m.Sender)
+                    .WithMany()
+                    .HasForeignKey(m => m.SenderId)
+                    .OnDelete(DeleteBehavior.NoAction);
             });
 
             // TourGuideApplication configuration

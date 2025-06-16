@@ -8,6 +8,7 @@ using R7alaAPI.Data;
 using R7alaAPI.Models;
 using System.Threading.RateLimiting;
 using R7alaAPI.Seeding;
+using R7alaAPI.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -108,6 +109,9 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+// Add SignalR service
+builder.Services.AddSignalR();
+
 var app = builder.Build();
 
 // Seed database with error handling
@@ -151,5 +155,7 @@ app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapHub<ChatHub>("/chatHub");
+
 
 app.Run();

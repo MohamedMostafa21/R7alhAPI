@@ -1,6 +1,72 @@
-Name,Description,Type,City,Country,Location,Latitude,Longitude,AveragePrice,Thumbnail,Image1,Image2,Image3
-Great Pyramid of Giza,"One of the Seven Wonders of the Ancient World, a massive limestone pyramid.",Landmark,Giza,Egypt,"Al Haram, Nazlet El-Semman",29.9792,31.1342,20,GreatPyramidGiza_thumb.jpg,GreatPyramidGiza_1.jpg,GreatPyramidGiza_2.jpg,
-Egyptian Museum,Home to an extensive collection of ancient Egyptian artifacts.,Museum,Cairo,Egypt,"Tahrir Square, Downtown",30.0478,31.2336,15,EgyptianMuseum_thumb.jpg,EgyptianMuseum_1.jpg,,
-Khan el-Khalili,A historic bazaar and souq in the Islamic Cairo district.,Market,Cairo,Egypt,"Al-Muizz Street, Islamic Cairo",30.0475,31.2621,0,KhanelKhalili_thumb.jpg,KhanelKhalili_1.jpg,KhanelKhalili_2.jpg,KhanelKhalili_3.jpg
-Luxor Temple,A large ancient Egyptian temple complex on the east bank of the Nile.,Landmark,Luxor,Egypt,"Corniche El Nil, Luxor",25.6996,32.6394,10,LuxorTemple_thumb.jpg,LuxorTemple_1.jpg,,
-Montaza Palace,A palace and gardens built by Khedive Abbas II in Alexandria.,Palace,Alexandria,Egypt,"Montaza, Alexandria",31.2885,30.0159,5,MontazaPalace_thumb.jpg,MontazaPalace_1.jpg,MontazaPalace_2.jpg,
+Name,Description,Type,City,Country,Location,Latitude,Longitude,AveragePrice,Thumbnail,Image1,Image2,Image3,Image4,Image5,Image6,Image7,Image8,Image9,Image10
+Artifacts Baron Palace,A historic palace with unique Hindu-inspired architecture.,Historical,Cairo,Egypt,Heliopolis Cairo,30.0869,31.3216,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Beach Sharm El Sheikh,A stunning Red Sea beach known for snorkeling and diving.,Natural,Sharm El Sheikh,Egypt,Naama Bay Sharm El Sheikh,27.9158,34.3299,0,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Boat The Solar of Khufu,Ancient solar boat discovered near the Great Pyramid.,Historical,Giza,Egypt,Giza Plateau,29.9792,31.1342,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Bridge Qasr El Nil,Iconic bridge over the Nile with lion statues.,Historical,Cairo,Egypt,Downtown Cairo,30.0436,31.2297,0,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Cairo Citadel,A fortified complex with mosques and museums.,Historical,Cairo,Egypt,Salah Salem Hwy Cairo,30.0297,31.2612,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Cairo Tower,The tallest structure in Egypt with panoramic views.,Cultural,Cairo,Egypt,Gezira Island Cairo,30.0459,31.2243,70,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Catacombs Kom El Shoqafa Karmouz,Ancient underground necropolis with Greco-Roman art.,Historical,Alexandria,Egypt,Karmouz Alexandria,31.1822,29.8965,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Chariot Tutankhamun,Gilded chariot from Tutankhamun’s tomb.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Citadel Qaitbay in Alexandria,15th-century fortress on the Mediterranean coast.,Historical,Alexandria,Egypt,Pharos Island Alexandria,31.2135,29.8856,40,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Clock Mohamed Ali Gift French King,Ornate clock gifted by France to Mohamed Ali.,Historical,Cairo,Egypt,Cairo Citadel,30.0297,31.2612,0,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Dam Aswan High,Engineering marvel controlling the Nile’s flow.,Historical,Aswan,Egypt,Aswan Dam,24.0333,32.8667,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+El Sheikh Zayed Grand Mosque,Modern mosque with stunning architecture.,Religious,Cairo,Egypt,New Cairo,30.0321,31.6168,0,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Hall Karnak Hypostyle,Grand hall with massive columns in Karnak Temple.,Historical,Luxor,Egypt,Karnak Temple Complex,25.7188,32.6573,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Head Statue Alexander The Great GraecoRoman Museum,Ancient statue in Alexandria’s museum.,Historical,Alexandria,Egypt,Graeco-Roman Museum,31.2001,29.9056,40,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Hurghada Museum,Museum showcasing Egyptian history and artifacts.,Cultural,Hurghada,Egypt,Hurghada City,27.2579,33.8116,45,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Islamic Art Museum in Cairo,Collection of Islamic artifacts and architecture.,Cultural,Cairo,Egypt,Bab Al-Khalq Cairo,30.0454,31.2625,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Library Bibliotheca Alexandrina,Modern library reviving the ancient Library of Alexandria.,Cultural,Alexandria,Egypt,El-Gaish Rd Alexandria,31.2089,29.9092,70,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Market Khan el Khalili,Vibrant historic market in Islamic Cairo.,Cultural,Cairo,Egypt,Al-Muizz Street Cairo,30.0475,31.2622,0,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Mask Tutankhamun Gold,Iconic gold mask from Tutankhamun’s tomb.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Mausoleum Aga Khan,Resting place of the Aga Khan III on the Nile.,Historical,Aswan,Egypt,West Bank Aswan,24.0889,32.8889,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Memorial El-Alamein War,Memorial for WWII battle in the Western Desert.,Historical,El Alamein,Egypt,El Alamein Coast,30.8333,28.95,20,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Monastery Saint Anthony,One of the oldest Christian monasteries in the world.,Religious,Red Sea Governorate,Egypt,Near Zafarana,28.3,32.35,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Monastery Saint Bishoy,Coptic monastery in the Nitrian Desert.,Religious,Wadi El Natrun,Egypt,Nitrian Desert,30.3167,30.3833,20,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Monastery Saint Catherine,Ancient monastery at the foot of Mount Sinai.,Religious,South Sinai,Egypt,Mount Sinai,28.5554,33.9754,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Monastery Saint Macarius the Great,Coptic monastery in the Wadi Natrun.,Religious,Wadi El Natrun,Egypt,Nitrian Desert,30.3167,30.3833,20,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Monastery Saint Samuel the Confessor,Monastery known for its spiritual heritage.,Religious,Minya,Egypt,Near Minya,28.1333,30.7167,20,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Mortuary Temple of Hatshepsut,Impressive temple dedicated to Queen Hatshepsut.,Historical,Luxor,Egypt,West Bank Luxor,25.7381,32.6062,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Mosque Al Azhar,Historic mosque and center of Islamic learning.,Religious,Cairo,Egypt,Al-Muizz Street Cairo,30.0456,31.2628,0,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Mosque Mohamed Ali,Iconic mosque within the Cairo Citadel.,Religious,Cairo,Egypt,Cairo Citadel,30.0297,31.2612,0,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Mount Musa (Moses),Sacred mountain associated with Prophet Moses.,Religious,South Sinai,Egypt,Mount Sinai,28.5397,33.975,20,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Mummy King Seqenenre,Preserved mummy of the Theban king from the 17th Dynasty.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Mummy Ramesses II,Mummy of the great pharaoh Ramesses II,Historical,Cairo,Egypt,National Museum of Egyptian Civilization,30.0085,31.3083,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Museum Coptic in Cairo,Museum showcasing Coptic Christian art and artifacts.,Cultural,Cairo,Egypt,Old Cairo,30.0059,31.2312,40,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Museum Egyptian,Iconic museum housing ancient Egyptian artifacts.,Cultural,Cairo,Egypt,Tahrir Square Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Museum Luxor,Museum displaying artifacts from Luxor and nearby sites.,Cultural,Luxor,Egypt,Corniche el-Nil Luxor,25.6999,32.6396,40,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Museum Nubian Arts in Aswan,Museum dedicated to Nubian culture and heritage.,Cultural,Aswan,Egypt,Elephantine Island Aswan,24.0919,32.889,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Narmer Palette,Ancient artifact depicting the unification of Egypt.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Obelisk King Senusret I,Granite obelisk from the 12th Dynasty in Heliopolis.,Historical,Cairo,Egypt,Heliopolis Cairo,30.1292,31.3078,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Palace Montaza,Royal palace with gardens on the Mediterranean coast.,Historical,Alexandria,Egypt,Montaza Alexandria,31.2885,30.0159,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Park Ras Mohammed National,Pristine national park with coral reefs and marine life.,Natural,Sharm El Sheikh,Egypt,Ras Mohammed,27.729,34.25,20,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Pharaonic Village in Cairo,Living museum showcasing ancient Egyptian life.,Cultural,Cairo,Egypt,Giza Cairo,30.0105,31.2124,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Pillar Pompey's in Alexandria,Misnamed Roman column from the 3rd century.,Historical,Alexandria,Egypt,Karmouz Alexandria,31.1821,29.8964,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Royal Chair Queen Hetepheres,Ancient chair from the tomb of Queen Hetepheres.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Royal Chair Tutankhamun,Ornate chair from Tutankhamun’s tomb.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Ruins Ancient Library Alexandria,Remnants of the legendary Library of Alexandria.,Historical,Alexandria,Egypt,Shallalat Gardens Alexandria,31.198,29.9092,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Sabil Kuttab Abdelrahman Katkhuda,18th-century Ottoman fountain and school.,Historical,Cairo,Egypt,Al-Muizz Street Cairo,30.049,31.26,0,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Shubra Palace,Historic palace with gardens in Cairo.,Historical,Cairo,Egypt,Shubra Cairo,30.0748,31.2465,40,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Siwa Salty Oasis,Unique salt lakes in the Siwa Oasis.,Natural,Siwa,Egypt,Siwa Oasis,29.2032,25.5195,20,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Sphinx of Giza,Iconic monument guarding the Giza Plateau.,Historical,Giza,Egypt,Giza Plateau,29.9753,31.1376,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statues Colossi Memnon Luxor,Giant statues of Amenhotep III in Luxor.,Historical,Luxor,Egypt,West Bank Luxor,25.7207,32.6105,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue Amenhotep III Queen Tiye,Statue of the royal couple from the 18th Dynasty.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue Anubis Jackal Form,Statue of the god Anubis in jackal form.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue Dwarf Seneb Family,Old Kingdom statue of Seneb and his family.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue God Serapis,Greco-Egyptian deity statue from Alexandria.,Historical,Alexandria,Egypt,Graeco-Roman Museum,31.2001,29.9056,40,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue Khafre Diorite,Iconic diorite statue of Pharaoh Khafre.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue King Senusret I,Statue of the 12th Dynasty pharaoh.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue King Thutmose III,Statue of the warrior pharaoh Thutmose III.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue of Mentuhotep,Statue of the 11th Dynasty pharaoh Mentuhotep II.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue Queen Cleopatra,Statue of the famous Ptolemaic queen.,Historical,Alexandria,Egypt,Graeco-Roman Museum,31.2001,29.9056,40,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue Ramesses II Mit Rahina,Colossal statue of Ramesses II in Memphis.,Historical,Mit Rahina,Egypt,Mit Rahina Museum,29.8537,31.2512,30,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue Seti I,Statue of the 19th Dynasty pharaoh Seti I.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Statue Sheikh El Balad Ka Aper,Wooden statue from the Old Kingdom.,Historical,Cairo,Egypt,Egyptian Museum Cairo,30.0478,31.2336,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Temple Abydos,Ancient temple dedicated to Osiris.,Historical,Sohag,Egypt,Abydos,26.185,31.9189,40,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Temple Edfu,Well-preserved Ptolemaic temple of Horus.,Historical,Edfu,Egypt,Edfu,24.9781,32.8734,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Temple Karnak,Vast temple complex dedicated to Amun-Ra.,Historical,Luxor,Egypt,Karnak Temple Complex,25.7188,32.6573,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Temple Luxor,Temple dedicated to the Theban triad.,Historical,Luxor,Egypt,Corniche el-Nil Luxor,25.6999,32.6396,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+Temple of Abu Simbel,Rock-cut temples of Ramesses II and Nefertari.,Historical,Abu Simbel,Egypt,Lake Nasser,22.3372,31.6258,70,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+The Great Pyramids of Giza,"Iconic pyramids of Khufu Khafra, and Mankwara.",Historical,Giza,Egypt,Giza Plateau,29.9792,31.1342,80,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+The Rosetta Stone,Key to deciphering Egyptian hieroglyphs.,Historical,Cairo,Egypt,National Museum of Egyptian Civilization,30.0085,31.3083,60,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+The Step Pyramid of Djoser,Oldest stone pyramid built for Pharaoh Djoser.,Historical,Saqqara,Egypt,Saqqara Necropolis,29.8712,31.2164,50,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg
+White Monastery,Ancient Coptic monastery near Sohag.,Religious,Sohag,Egypt,Near Sohag,26.5167,31.6667,20,1.jpg,2.jpg,3.jpg,4.jpg,5.jpg,6.jpg,7.jpg,8.jpg,9.jpg,10.jpg,11.jpg

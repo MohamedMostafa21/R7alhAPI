@@ -5,7 +5,6 @@ using R7alaAPI.Data;
 using R7alaAPI.Models;
 using System;
 using System.Collections.Generic;
-using System.Formats.Asn1;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -28,6 +27,13 @@ namespace R7alaAPI.Seeding
         public string Image1 { get; set; }
         public string Image2 { get; set; }
         public string Image3 { get; set; }
+        public string Image4 { get; set; }
+        public string Image5 { get; set; }
+        public string Image6 { get; set; }
+        public string Image7 { get; set; }
+        public string Image8 { get; set; }
+        public string Image9 { get; set; }
+        public string Image10 { get; set; }
     }
 
     public class SeedPlaces
@@ -98,31 +104,37 @@ namespace R7alaAPI.Seeding
                         ImageUrls = new List<string>()
                     };
 
+                    // Construct folder path based on place name
+                    var folderName = record.Name.Replace(" ", "_");
+                    var placeFolderPath = Path.Combine(_seedImagesPath, folderName);
+
                     // Handle Thumbnail
                     if (!string.IsNullOrEmpty(record.Thumbnail))
                     {
-                        var thumbnailPath = Path.Combine(_seedImagesPath, record.Thumbnail);
+                        var thumbnailPath = Path.Combine(placeFolderPath, record.Thumbnail);
                         if (File.Exists(thumbnailPath))
                         {
                             place.ThumbnailUrl = await CopyFileAsync(thumbnailPath, "places/thumbnails");
                         }
                         else
                         {
-                            Console.WriteLine($"Thumbnail not found for {record.Name}: {record.Thumbnail}");
+                            Console.WriteLine($"Thumbnail not found for {record.Name}: {thumbnailPath}");
                         }
                     }
 
                     // Handle Additional Images
-                    foreach (var imageName in new[] { record.Image1, record.Image2, record.Image3 }.Where(img => !string.IsNullOrEmpty(img)))
+                    var imageFields = new[] { record.Image1, record.Image2, record.Image3, record.Image4, record.Image5,
+                                             record.Image6, record.Image7, record.Image8, record.Image9, record.Image10 };
+                    foreach (var imageName in imageFields.Where(img => !string.IsNullOrEmpty(img)))
                     {
-                        var imagePath = Path.Combine(_seedImagesPath, imageName);
+                        var imagePath = Path.Combine(placeFolderPath, imageName);
                         if (File.Exists(imagePath))
                         {
                             place.ImageUrls.Add(await CopyFileAsync(imagePath, "places/images"));
                         }
                         else
                         {
-                            Console.WriteLine($"Image not found for {record.Name}: {imageName}");
+                            Console.WriteLine($"Image not found for {record.Name}: {imagePath}");
                         }
                     }
 
@@ -150,9 +162,9 @@ namespace R7alaAPI.Seeding
             }
 
             var fileInfo = new FileInfo(sourcePath);
-            if (fileInfo.Length > 5 * 1024 * 1024)
+            if (fileInfo.Length > 300 * 1024 * 1024)
             {
-                throw new ArgumentException($"File size exceeds 5MB limit for {sourcePath}.");
+                throw new ArgumentException($"File size exceeds 300MB limit for {sourcePath}.");
             }
 
             var uploadsFolder = Path.Combine("wwwroot", "Uploads", subfolder);
