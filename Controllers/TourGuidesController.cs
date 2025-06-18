@@ -34,8 +34,54 @@ namespace R7alaAPI.Controllers
             _roleManager = roleManager;
         }
 
+        /// <summary>
+        /// Retrieves all tour guides.
+        /// </summary>
         [HttpGet]
-        public async Task<IActionResult> GetAllTourGuides(
+        public async Task<IActionResult> GetAllTourGuides()
+        {
+            var tourGuideRole = await _roleManager.FindByNameAsync("TourGuide");
+            if (tourGuideRole == null)
+                return NotFound(new { message = "TourGuide role not found" });
+
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException("User ID not found in token."));
+
+            var tourGuides = await _context.TourGuides
+                .Include(tg => tg.User)
+                .Include(tg => tg.Reviews)
+                .Join(
+                    _context.UserRoles,
+                    tg => tg.UserId,
+                    ur => ur.UserId,
+                    (tg, ur) => new { TourGuide = tg, UserRole = ur }
+                )
+                .Where(t => t.UserRole.RoleId == tourGuideRole.Id)
+                .Select(t => new TourGuideDto
+                {
+                    Id = t.TourGuide.Id,
+                    UserId = t.TourGuide.UserId,
+                    FirstName = t.TourGuide.User.FirstName,
+                    LastName = t.TourGuide.User.LastName,
+                    Bio = t.TourGuide.Bio,
+                    City = t.TourGuide.User.City,
+                    YearsOfExperience = t.TourGuide.YearsOfExperience,
+                    Languages = t.TourGuide.Languages,
+                    HourlyRate = t.TourGuide.HourlyRate,
+                    IsAvailable = t.TourGuide.IsAvailable,
+                    ProfilePictureUrl = t.TourGuide.ProfilePictureUrl,
+                    Stars = t.TourGuide.Reviews.Any() ? t.TourGuide.Reviews.Average(r => r.Rating) : 0.0,
+                    IsFavorited = t.TourGuide.User.Favorites != null && t.TourGuide.User.Favorites.Any(f => f.TourGuideId == t.TourGuide.Id && f.UserId == currentUserId)
+                })
+                .ToListAsync();
+
+            return Ok(tourGuides);
+        }
+
+        /// <summary>
+        /// Retrieves tour guides with optional filters for city, languages, and max hourly rate.
+        /// </summary>
+        [HttpGet("filter")]
+        public async Task<IActionResult> GetFilteredTourGuides(
             [FromQuery] string? city,
             [FromQuery] string? languages,
             [FromQuery] decimal? maxHourlyRate,
@@ -55,8 +101,11 @@ namespace R7alaAPI.Controllers
             if (tourGuideRole == null)
                 return NotFound(new { message = "TourGuide role not found" });
 
+            var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? throw new InvalidOperationException("User ID not found in token."));
+
             var query = _context.TourGuides
                 .Include(tg => tg.User)
+                .Include(tg => tg.Reviews)
                 .Join(
                     _context.UserRoles,
                     tg => tg.UserId,
@@ -68,15 +117,7 @@ namespace R7alaAPI.Controllers
             // Apply filters
             if (!string.IsNullOrWhiteSpace(city))
             {
-                query = query.Where(t => t.TourGuide.User.City != null && t.TourGuide.User.City.Equals(city, StringComparison.OrdinalIgnoreCase));
-            }
-
-            List<string> languageList = null;
-            if (!string.IsNullOrWhiteSpace(languages))
-            {
-                languageList = languages.Split(',', StringSplitOptions.RemoveEmptyEntries)
-                    .Select(l => l.Trim())
-                    .ToList();
+                query = query.Where(t => t.TourGuide.User.City != null && t.TourGuide.User.City.ToLower() == city.ToLower());
             }
 
             if (maxHourlyRate.HasValue)
@@ -84,10 +125,18 @@ namespace R7alaAPI.Controllers
                 query = query.Where(t => t.TourGuide.HourlyRate <= maxHourlyRate.Value);
             }
 
-            // Get total count for pagination
+            List<string> languageList = null;
+            if (!string.IsNullOrWhiteSpace(languages))
+            {
+                languageList = languages.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(l => l.Trim().ToLower())
+                    .ToList();
+            }
+
+            // Get total count before pagination
             var totalItems = await query.CountAsync();
 
-            // Fetch data for pagination
+            // Fetch data with pagination
             var tourGuidesQuery = query
                 .OrderBy(t => t.TourGuide.Id)
                 .Skip((page - 1) * pageSize)
@@ -106,16 +155,16 @@ namespace R7alaAPI.Controllers
                     IsAvailable = t.TourGuide.IsAvailable,
                     ProfilePictureUrl = t.TourGuide.ProfilePictureUrl,
                     Stars = t.TourGuide.Reviews.Any() ? t.TourGuide.Reviews.Average(r => r.Rating) : 0.0,
-                    IsFavorited = t.TourGuide.User.Favorites != null && t.TourGuide.User.Favorites.Any(f => f.TourGuideId == t.TourGuide.Id && f.UserId == int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                    IsFavorited = t.TourGuide.User.Favorites != null && t.TourGuide.User.Favorites.Any(f => f.TourGuideId == t.TourGuide.Id && f.UserId == currentUserId)
                 });
 
             var tourGuides = await tourGuidesQuery.ToListAsync();
 
-            // Apply language filter in memory if needed
+            // Apply language filter in memory (if needed)
             if (languageList != null && languageList.Any())
             {
                 tourGuides = tourGuides
-                    .Where(tg => languageList.All(lang => tg.Languages.Any(l => l.Equals(lang, StringComparison.OrdinalIgnoreCase))))
+                    .Where(tg => languageList.All(lang => tg.Languages.Any(l => l.ToLower() == lang)))
                     .ToList();
                 totalItems = tourGuides.Count; // Adjust totalItems for in-memory filtering
             }
@@ -250,7 +299,7 @@ namespace R7alaAPI.Controllers
                 Languages = applicationDto.Languages,
                 HourlyRate = applicationDto.HourlyRate,
                 Status = ApplicationStatus.Pending,
-                AdminComment = null // Explicitly set to null
+                AdminComment = null
             };
 
             if (applicationDto.CV != null)
